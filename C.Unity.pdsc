@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<package schemaVersion="1.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+  <vendor>C</vendor>
+  <name>Unity</name>
+  <description>Various general function modules</description>
+  <url></url>
+  <supportContact>carithers@163.com</supportContact>
+  <!-- optional license file -->
+  <!-- 
+  <license>
+  </license>
+  -->
+  
+  <releases>
+    <release version="1.0.0" date="2022-08-25">
+      add state machine
+    </release>
+  </releases>
+
+  <keywords>
+    <!-- keywords for indexing -->
+    <keyword>unity</keyword>
+	<keyword>state machine</keyword>
+  </keywords>
+
+  <!-- apis section (optional - for Application Programming Interface descriptions) -->
+  <!-- 
+  <apis>
+  </apis>
+  -->
+
+  <!-- boards section (mandatory for Board Support Packs) -->
+  <!-- 
+  <boards>
+  </boards>
+  -->
+
+  <!-- devices section (mandatory for Device Family Packs) -->
+  <!--
+  <devices>
+  </devices>
+  -->
+
+  <!-- examples section (optional for all Software Packs)-->
+  <!--
+  <examples>
+  </examples>
+  -->
+  
+  <!-- conditions section (optional for all Software Packs)-->
+  <!--
+  <conditions>
+  </conditions>
+  -->
+  
+  <!-- component section (optional for all Software Packs)-->
+  
+  <components>
+    <component Cclass="C Unity" Cgroup="state machine" Csub="state machine rtos" Cversion="1.0.0">
+      <description>state machine be applicable rtos</description>
+      <files>
+        <file category="header" name="0.1 c_state_machine_rtos\c_state_machine_rtos.h"/>
+        <file category="header" name="0.1 c_state_machine_rtos\c_state_machine_rtos_cfg.h" attr="config"/>
+        <file category="source" name="0.1 c_state_machine_rtos\c_state_machine_rtos.c"/>
+      </files>
+    </component>
+
+  </components>
+
+  
+  <!-- optional taxonomy section for defining new component Class and Group names -->
+  <!--
+  <taxonomy>
+  </taxonomy>
+  -->
+  
+</package>
