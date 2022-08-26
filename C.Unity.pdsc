@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<package schemaVersion="1.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+<package schemaVersion="1.0.1"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
   <vendor>C</vendor>
   <name>Unity</name>
   <description>Various general function modules</description>
-  <url></url>
+  <url>https://gitee.com/carithers/cunity</url>
   <supportContact>carithers@163.com</supportContact>
   <!-- optional license file -->
   <!-- 
   <license>
   </license>
   -->
-  
+
   <releases>
+    <release version="1.0.1" date="2022-08-26">
+      add kalman filter single value type
+    </release>
     <release version="1.0.0" date="2022-08-25">
       add state machine
     </release>
@@ -21,7 +25,8 @@
   <keywords>
     <!-- keywords for indexing -->
     <keyword>unity</keyword>
-	<keyword>state machine</keyword>
+    <keyword>state machine</keyword>
+    <keyword>kalman filter</keyword>
   </keywords>
 
   <!-- apis section (optional - for Application Programming Interface descriptions) -->
@@ -47,15 +52,15 @@
   <examples>
   </examples>
   -->
-  
+
   <!-- conditions section (optional for all Software Packs)-->
   <!--
   <conditions>
   </conditions>
   -->
-  
+
   <!-- component section (optional for all Software Packs)-->
-  
+
   <components>
     <component Cclass="C Unity" Cgroup="state machine" Csub="state machine rtos" Cversion="1.0.0">
       <description>state machine be applicable rtos</description>
@@ -65,14 +70,21 @@
         <file category="source" name="0.1 c_state_machine_rtos\c_state_machine_rtos.c"/>
       </files>
     </component>
+    <component Cclass="C Unity" Cgroup="kalman filter" Csub="kalman filter single value" Cversion="1.0.0">
+      <description>Kalman filter single value type</description>
+      <files>
+        <file category="header" name="0.2 kalman_filter\c_kalman_filter.h"/>
+        <file category="source" name="0.2 kalman_filter\c_kalman_filter.c"/>
+      </files>
+    </component>
 
   </components>
 
-  
+
   <!-- optional taxonomy section for defining new component Class and Group names -->
   <!--
   <taxonomy>
   </taxonomy>
   -->
-  
+
 </package>
