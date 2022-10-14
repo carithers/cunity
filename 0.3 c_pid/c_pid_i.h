@@ -28,6 +28,12 @@ typedef struct {
 }st_c_pid_i_typedef;
 
 
+/**
+ * @description: 增量式PID计算函数
+ * @param {st_c_pid_i_typedef} *v: pid结构体
+ * @param {float} measure: 测量值
+ * @return {float} 增量值
+ */
 float c_pid_i(st_c_pid_i_typedef *v, float measure);
 
 #ifdef __cplusplus

@@ -29,9 +29,13 @@ typedef struct {
 }st_c_pid_p_typedef;
 
 
-
+/**
+ * @description: 位置式PID计算函数
+ * @param {st_c_pid_p_typedef} *v: 位置式PID结构体
+ * @param {float} measure: 测量值
+ * @return {float} 控制值
+ */
 float c_pid_p(st_c_pid_p_typedef *v, float measure);
-
 
 #ifdef __cplusplus
 }
