@@ -14,6 +14,9 @@
   -->
 
   <releases>
+	<release version="1.0.2" date="2022-10-14">
+      PID
+    </release>
     <release version="1.0.1" date="2022-08-26">
       add kalman filter single value type
     </release>
@@ -21,19 +24,41 @@
       add state machine
     </release>
   </releases>
+  
+  <taxonomy>
+	<description Cclass="C Unity" doc="https://gitee.com/carithers/cunity">Open source link of common components</description>
+  </taxonomy>
 
   <keywords>
     <!-- keywords for indexing -->
     <keyword>unity</keyword>
     <keyword>state machine</keyword>
     <keyword>kalman filter</keyword>
+	<keyword>pid</keyword>
   </keywords>
 
   <!-- apis section (optional - for Application Programming Interface descriptions) -->
-  <!-- 
   <apis>
+	<api Cclass="C Unity" Cgroup="state machine" Capiversion="1.0.0" exclusive="1">
+      <description>state machine be applicable rtos</description>
+      <files>
+        <file category="doc" name="https://gitee.com/carithers/cunity/tree/master/0.1%20c_state_machine_rtos"/>
+      </files>
+    </api>
+	<api Cclass="C Unity" Cgroup="kalman filter" Capiversion="1.0.0" exclusive="2">
+      <description>Kalman filter single value type</description>
+      <files>
+        <file category="doc" name="https://gitee.com/carithers/cunity/tree/master/0.2%20c_kalman_filter"/>
+      </files>
+    </api>
+	<api Cclass="C Unity" Cgroup="pid" Capiversion="1.0.0" exclusive="3">
+      <description>position pid and increment pid</description>
+      <files>
+        <file category="doc" name="https://gitee.com/carithers/cunity/tree/master/0.3%20c_pid"/>
+      </files>
+    </api>
   </apis>
-  -->
+
 
   <!-- boards section (mandatory for Board Support Packs) -->
   <!-- 
@@ -73,8 +98,22 @@
     <component Cclass="C Unity" Cgroup="kalman filter" Csub="kalman filter single value" Cversion="1.0.0">
       <description>Kalman filter single value type</description>
       <files>
-        <file category="header" name="0.2 kalman_filter\c_kalman_filter.h"/>
-        <file category="source" name="0.2 kalman_filter\c_kalman_filter.c"/>
+        <file category="header" name="0.2 c_kalman_filter\c_kalman_filter.h"/>
+        <file category="source" name="0.2 c_kalman_filter\c_kalman_filter.c"/>
+      </files>
+    </component>
+	<component Cclass="C Unity" Cgroup="pid" Csub="pid_p" Cversion="1.0.0">
+      <description>pid position</description>
+      <files>
+        <file category="header" name="0.3 c_pid\c_pid_p.h"/>
+        <file category="source" name="0.3 c_pid\c_pid_p.c"/>
+      </files>
+    </component>
+	<component Cclass="C Unity" Cgroup="pid" Csub="pid_i" Cversion="1.0.0">
+      <description>pid increment</description>
+      <files>
+        <file category="header" name="0.3 c_pid\c_pid_i.h"/>
+        <file category="source" name="0.3 c_pid\c_pid_i.c"/>
       </files>
     </component>
 
